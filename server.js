@@ -12,6 +12,11 @@ const users = [
   { username: 'user2', password: 'password2' }
 ];
 
+// GET route for the root path
+app.get('/', (req, res) => {
+  res.send('Server is running!');
+});
+
 // Login endpoint
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
@@ -25,5 +30,5 @@ app.post('/login', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
+  console.log(`Server running at http://localhost:3000/`);
 });
